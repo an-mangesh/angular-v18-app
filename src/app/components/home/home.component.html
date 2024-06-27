@@ -1,0 +1,25 @@
+<style>
+  table {
+    border: 1px solid black;
+  }
+</style>
+
+<div *ngIf="isAdmin; else notAdminTemplate">
+  <div class="content" role="main">
+    <h1>Hello {{ name }} you are checking tutorial {{ title }}</h1>
+    <p>Today's date - {{ todayDate }}</p>
+    <p>Math Calc of 969 + 5285 is: {{ 969 + 5285 }}</p>
+    <p>Angular v18 App is running.</p>
+
+    <nav>
+      <a routerLink="/control-flow" routerLinkActive="active"
+        >Control Flow Component</a
+      >
+    </nav>
+    <p>home works!</p>
+  </div>
+</div>
+
+<ng-template #notAdminTemplate>
+  <p>Hi, non-admin user!</p>
+</ng-template>

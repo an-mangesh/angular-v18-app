@@ -1,0 +1,28 @@
+<p>control-flow works!</p>
+<p>Greeting : {{ greet }}</p>
+<table>
+  <tr>
+    <th>Sr. No</th>
+    <th>Id</th>
+    <th>Name</th>
+    <th>Email ID</th>
+  </tr>
+
+  <div *ngFor="let usr of usersData; let i = index">
+    <tr>
+      <td>{{ i + 1 }}</td>
+      <td>{{ usr.id }}</td>
+      <td>{{ usr.name }}</td>
+      <td>{{ usr.email }}</td>
+    </tr>
+  </div>
+</table>
+
+<p>
+  Current Status : {{ isEditable }}
+  <input type="text" [disabled]="!isEditable" name="name" id="name" />
+  <button (click)="enableInput()">Enable Input Field</button>
+</p>
+<p>
+  <button (mouseover)="getgreeting()">Change Greeting Message</button>
+</p>

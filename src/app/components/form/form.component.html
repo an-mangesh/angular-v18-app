@@ -1,0 +1,48 @@
+<p>form works!</p>
+<label class="framework">
+  <p>Favourite Framework: {{ favouriteFramework }}</p>
+  <input
+    type="text"
+    id="framework"
+    [(ngModel)]="favouriteFramework"
+    placeholder="Favourite Framework"
+  />
+  <br />
+  <br />
+
+  <button type="submit" (click)="showFramework()">
+    Fetch Favourite Framework
+  </button>
+  <br />
+  <br />
+
+  <button type="submit" (click)="addFramework()">
+    Add Favourite Framework
+  </button>
+
+  <br />
+  <br />
+
+  <button type="submit" (click)="resetFramework()">Reset Framework</button>
+</label>
+
+<br />
+<br />
+************************************************************************************************"
+<br /><br />
+<form [formGroup]="profileForm" (ngSubmit)="handleSubmit()">
+  <label>
+    Name
+    <input type="text" formControlName="name" />
+  </label>
+  <label>
+    Email
+    <input type="email" formControlName="email" /> </label
+  ><br />
+  <br />
+  <button type="submit" [disabled]="!profileForm.valid">Submit</button>
+</form>
+
+<h2>Profile Form</h2>
+<p>Name is {{ profileForm.controls.name.valid ? "Valid" : "Invalid" }}</p>
+<p>Email is {{ profileForm.controls.email.valid ? "Valid" : "Invalid" }}</p>

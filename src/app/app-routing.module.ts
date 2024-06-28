@@ -4,6 +4,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { FormComponent } from './components/form/form.component';
 import { InjectableServiceComponent } from './components/injectable-service/injectable-service.component';
+import { ConstrctDependancyInjectionComponent } from './components/constrct-dependancy-injection/constrct-dependancy-injection.component';
+import { PipeOperationComponent } from './components/pipe-operation/pipe-operation.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -11,6 +13,14 @@ const routes: Routes = [
   { path: 'control-flow', component: ControlFlowComponent },
   { path: 'form', component: FormComponent },
   { path: 'inject-service', component: InjectableServiceComponent },
+  {
+    path: 'constructor-based-dependency-inject',
+    component: ConstrctDependancyInjectionComponent,
+  },
+  {
+    path: 'pipe',
+    component: PipeOperationComponent,
+  },
 ];
 
 @NgModule({

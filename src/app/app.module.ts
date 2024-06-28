@@ -5,6 +5,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ControlFlowComponent } from './components/control-flow/control-flow.component';
 import { HomeComponent } from './components/home/home.component';
+import { ConstrctDependancyInjectionComponent } from './components/constrct-dependancy-injection/constrct-dependancy-injection.component';
+import { PipeOperationComponent } from './components/pipe-operation/pipe-operation.component';
+import { CustomLengthFilterPipe, CustomReversePipe } from './custom-pipe.pipe';
 
 /**
  * Forms component,InjectableServiceComponent are Standalone component , thats why commented and not imported.
@@ -18,6 +21,10 @@ import { HomeComponent } from './components/home/home.component';
     AppComponent,
     ControlFlowComponent,
     HomeComponent,
+    ConstrctDependancyInjectionComponent,
+    PipeOperationComponent,
+    CustomLengthFilterPipe,
+    CustomReversePipe,
     // InjectableServiceComponent,
     // FormComponent,
   ],

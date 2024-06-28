@@ -1,0 +1,99 @@
+<style>
+  table,
+  th,
+  td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+<p>pipe-operation works!</p>
+<h2><b>String's Pipe =======> </b></h2>
+
+<p><b> Original Message : </b> {{ message }}</p>
+<p>Upper Case - {{ message | uppercase }}</p>
+<p>Lower Case - {{ message | lowercase }}</p>
+<p>Transformed String - {{ message | titlecase }}</p>
+<p>Sliced String(SlicePipe) - {{ message | slice : 0 : 7 }}</p>
+
+<p>Number with "decimal" {{ number1 | number : "3.2-2" }}</p>
+
+<p><b>Original Array:</b> {{ array }}</p>
+<p>Sliced Array - {{ array | slice : 1 : 3 }}</p>
+
+<h2><b>Currency Pipe=======> </b></h2>
+
+<p><b> Orinal Price: </b> {{ price | currency }}</p>
+
+<table style="border: 1px solid black">
+  <tr>
+    <th>Country / currency</th>
+    <th>Converted Price</th>
+  </tr>
+  <tr>
+    <td>India</td>
+    <td>{{ price | currency : "INR" : "symbol" : "4.2-2" }}</td>
+  </tr>
+  <tr>
+    <td>Euro (EUR) Price:</td>
+    <td>{{ price | currency : "EUR" : "symbol-narrow" : "4.2-2" }}</td>
+  </tr>
+
+  <tr>
+    <td>USA (United States Dollar - USD) Price :</td>
+    <td>{{ price | currency : "USD" : "symbol" : "1.2-2" }}</td>
+  </tr>
+
+  <tr>
+    <td>London (British Pound Sterling - GBP) Price :</td>
+    <td>{{ price | currency : "GBP" : "symbol" : "1.2-2" }}</td>
+  </tr>
+
+  <tr>
+    <td>UK (British Pound Sterling - GBP) Price :</td>
+    <td>{{ price | currency : "GBP" : "symbol" : "1.2-2" }}</td>
+  </tr>
+
+  <tr>
+    <td>Switzerland (Swiss Franc - CHF) Price :</td>
+    <td>{{ price | currency : "GBP" : "symbol" : "1.2-2" }}</td>
+  </tr>
+
+  <tr>
+    <td>China (Chinese Yuan Renminbi - CNY) Price :</td>
+    <td>{{ price | currency : "CNY" : "symbol" : "1.2-2" }}</td>
+  </tr>
+
+  <tr>
+    <td>Russia (Russian Ruble - RUB) Price :</td>
+    <td>{{ price | currency : "RUB" : "symbol" : "1.2-2" }}</td>
+  </tr>
+</table>
+
+<h2><b>Date Pipe =======> </b></h2>
+<p><b>Original Date </b> {{ currentDate }}</p>
+<p>Current date(date): {{ currentDate | date }}</p>
+<p>Current date(fullDate): {{ currentDate | date : "fullDate" }}</p>
+<p>Current date(short): {{ currentDate | date : "short" }}</p>
+<p>Current date(medium): {{ currentDate | date : "medium" }}</p>
+<p>Specific Date with "date" {{ birthday | date : "medium" }}</p>
+
+<h2><b>JsonPipe =======> </b></h2>
+<pre>{{ object | json }}</pre>
+
+<h2><b>PercentPipe=======> </b></h2>
+<p><b>Original Number </b> {{ number2 }}</p>
+<p>Percentage Value: {{ number2 | percent }}</p>
+
+<h2><b>AsyncPipe with Observable and Promise =======> </b></h2>
+<p>observable - {{ observable$ | async }}</p>
+<p>promise - {{ promise$ | async }}</p>
+
+<h2><b>Using Custom Pipe =======> </b></h2>
+<ul>
+  <li *ngFor="let fruit of fruits | filterByLength : 7">
+    {{ fruit | uppercase }}
+  </li>
+</ul>
+
+<p><b> Original Message : </b> {{ message }}</p>
+<p>Reverse Machine - {{ message | reverse }}</p>

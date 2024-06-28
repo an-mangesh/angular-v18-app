@@ -7,16 +7,18 @@ import { ControlFlowComponent } from './components/control-flow/control-flow.com
 import { HomeComponent } from './components/home/home.component';
 
 /**
- * Forms component is Standalone component , thats why commented and not imported.
+ * Forms component,InjectableServiceComponent are Standalone component , thats why commented and not imported.
  */
 
 // import { FormComponent } from './components/form/form.component';
+// import { InjectableServiceComponent } from './components/injectable-service/injectable-service.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ControlFlowComponent,
     HomeComponent,
+    // InjectableServiceComponent,
     // FormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
